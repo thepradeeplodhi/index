@@ -1,333 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroTech Store</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #0d0d0d;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .hero {
-            background-color: #000;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-            z-index: 0;
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 1;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px;
-        }
-
-        .gallery img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 40px;
-        }
-
-        .product-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .product-card h3 {
-            margin: 15px 0 10px 0;
-        }
-
-        .product-card button {
-            background-color: #0d0d0d;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .product-card button:hover {
-            background-color: #333;
-        }
-
-        .cart, .login, .checkout, .contact {
-            padding: 40px;
-        }
-
-        form input, form textarea {
-            padding: 10px;
-            margin: 10px 0;
-            width: 300px;
-            display: block;
-        }
-
-        form button {
-            background-color: #0d0d0d;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #0d0d0d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+    <title>Pradeep's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header>
-        <h1>ElectroTech Store</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
-            <a href="#login">Login</a>
-            <a href="#checkout">Checkout</a>
-            <a href="#contact">Contact</a>
-        </nav>
+   <div class="navbar">
+       <div class="nav-logo border">
+           <div class="logo"></div>
+       </div>
+       <div class="nav-address border">
+           <p class="add-first">Deliver to</p>
+           <div class="add-icon">
+               <i class="fa-solid fa-location-dot"></i>
+            <p class="add-second">  India</p>
+           </div>
+       </div>
+       <div class="nav-search">
+           <select class="search-select">
+            <option>All</option>
+           </select>
+           <input placeholder="Search Amazon" class="search-input">
+           <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+           </div>
+        </div>
+        <div class="nav-signin border">
+            <p><span>Hello, Sign in</span></p>
+            <p class="nav-second">Account & Lists</p>
+        </div>
+        <div class="nav-return border">
+            <p><span>Returns</span></p>
+            <p class="nav-second">& Orders</p>
+        </div>
+        <div class="nav-cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+        </div>
+   </div>
+        <div class="panel">
+            <div class="panel-all">
+                 <i class="fa-solid fa-bars"></i> 
+                All
+            </div>
+            <div class="panel-ops">
+                 <p>Today's Deals</p>
+                 <p>Customer Service</p>
+                 <p>Gift Cards</p>
+                 <p>Sell</p>
+                 <p>Disability Customer Support</p>
+                 <p>Previous slide</p>
+            </div>
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+        </div>
     </header>
-
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3Ryb25pYyUyMGRldmljZXN8ZW58MHx8MHx8fDA%3D" alt="Hero Image" height="500">
-        <div class="hero-text">Discover the Latest Electronics</div>
-    </section>
-
-    <section class="gallery">
-        <img src="https://www.whirlpool.com/is/image/content/dam/business-unit/whirlpoolv2/en-us/marketing-content/site-assets/page-content/oc-articles/how-do-refrigerators-work/how-do-refrigerators-work_1.jpg?fmt=png-alpha&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&scl=1&constrain=fit,1" alt="Electronics 1">
-        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/s-series/s2725h/pdp/monitor-s2725h-pdp-module-hero.psd?fmt=jpg&wid=3000&hei=2063" alt="Electronics 2">
-        <img src="https://www.ebug.in/images/blogs/3Y-LgWTg.jpg" alt="Electronics 3">
-        <img src="https://www.cruiseac.com/assets/images/product/EpLfnBmqJaHcxY4w318Fpng.png" alt="Electronics 4">
-        <img src="https://electronicparadise.in/cdn/shop/files/2_773b7102-49c9-4642-99b4-eabda8ea16ea.jpg?v=1731755988&width=1214" alt="Electronics 5">
-        <img src="https://www.apple.com/v/iphone/home/cb/images/meta/iphone__kqge21l9n26q_og.png" alt="Electronics 6">
-    </section>
-
-    <section class="products" id="products">
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71d7rfSl0wL.jpg" alt="Smartphone">
-            <h3>Iphone 15</h3>
-            <p>$999</p>
-            <button onclick="addToCart('Smartphone X', 999)">Add to Cart</button>
+    <div class="hero-section">
+        <div class="hero-msg">
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in</a></p>
         </div>
+    </div>
 
-        <div class="product-card">
-            <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw66fe4c98/images/Titan/Catalog/90188AP06_1.jpg?sw=600&sh=600" alt="Smartwatch">
-            <h3>Noise Smartwatch</h3>
-            <p>$299</p>
-            <button onclick="addToCart('Smartwatch Y', 299)">Add to Cart</button>
+    <div class="shop-section">
+        <div class="box9 box">
+            <div class="box-content">
+                <h3>Jewellery</h3>
+                <div class="box-img" style="background-image:url('jewel.jpeg'); background-size: cover;"></div>
+                <p>See More</p>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61USODKUVlL.jpg" alt="Tablet">
-            <h3>Samsung Galaxy Tab A9</h3>
-            <p>$499</p>
-            <button onclick="addToCart('Tablet Z', 499)">Add to Cart</button>
+        <div class="box10 box">
+            <div class="box-content">
+                <h3>Smartwatches</h3>
+                <div class="box-img" style="background-image:url('VFit_Active_Premium_Smart_Watch_1800x.webp');"></div>
+                <p>See More</p>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop">
-            <h3>Macbook M2 Pro</h3>
-            <p>$1299</p>
-            <button onclick="addToCart('Laptop Pro', 1299)">Add to Cart</button>
+        <div class="box11 box"><div class="box-content">
+                <h3>Wrist Watches</h3>
+            <div class="box-img" style="background-image:url('wrist.webp');"></div>
+            <p>See More</p>
+            </div></div>
+        <div class="box12 box">
+            <div class="box-content">
+                <h3>Shoes & Accessories</h3>
+            <div class="box-img" style="background-image:url('shoes.jpg');"></div>
+            <p>See More</p>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://www.boat-lifestyle.com/cdn/shop/products/c2386af9-4349-432f-8ba5-2b6aa06025c8.png?v=1744005712" alt="Wireless Earbuds">
-            <h3>Boat Earbuds</h3>
-            <p>$199</p>
-            <button onclick="addToCart('Wireless Earbuds', 199)">Add to Cart</button>
+        <div class="box1 box">
+            <div class="box-content">
+                <h3>Health & Personal Care</h3>
+                <div class="box-img" style="background-image:url('Safe_and_Natural_Personal_Care_Products.jpg');"></div>
+                <p>See More</p>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://www.designinfo.in/wp-content/uploads/2024/09/sony-ps5-slim-disc-edition-5.webp" alt="Gaming Console">
-            <h3>Gaming Console</h3>
-            <p>$499</p>
-            <button onclick="addToCart('Gaming Console', 499)">Add to Cart</button>
+        <div class="box2 box">
+            <div class="box-content">
+                <h3>Home Arrivals</h3>
+                <div class="box-img" style="background-image:url('home.webp');"></div>
+                <p>See More</p>
+            </div>
         </div>
-            
-        <div class="product-card">
-            <img src="https://image.made-in-china.com/202f0j00CsVqObNlicoS/Nice-Calidad-Split-AC-Cool-1-5-Ton-2-Ton-Air-Conditioner-for-Home-Use-Office-Use-High-Quality-Airflow-with-Low-Price-Wall-Split-Air-Conditioner.webp" alt="AC">
-            <h3>Air Conditioner</h3>
-            <p>$799</p>
-            <button onclick="addToCart('Air Conditioner', 799)">Add to Cart</button>
+        <div class="box3 box"><div class="box-content">
+                <h3>Get your Game On</h3>
+            <div class="box-img" style="background-image:url('purple-gaming-paradise-stockcake.jpg');  background-size: contain;"></div>
+            <p>See More</p>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="https://img.clevup.in/16980/blue-square-bs222-ac-power-multimedia-speaker-lapt-1702018735379_SKU-0281_0.png?format=webp" alt="LOGO">
-            <h3>Speaker</h3>
-            <p>$199</p>
-            <button onclick="addToCart('Speaker', 0)">Add to Cart</button>
+        <div class="box4 box">
+            <div class="box-content">
+                <h3>Electronics</h3>
+            <div class="box-img" style="background-image:url('sr-bg-1-2.jpg');"></div>
+            <p>See More</p>
+            </div>
         </div>
-
-
-    </section>
-
-    <section class="cart" id="cart">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <h3>Total: $<span id="total-price">0</span></h3>
-        <button onclick="clearCart()">Clear Cart</button>
-    </section>
-
-    <section class="login" id="login">
-        <h2>Login</h2>
-        <form onsubmit="login(event)">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
-    <section class="checkout" id="checkout">
-        <h2>Checkout</h2>
-        <p>Complete your payment to place the order.</p>
-        <button onclick="checkout()">Pay Now</button>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <form onsubmit="submitContactForm(event)">
-            <input type="text" id="contact-name" placeholder="Your Name" required>
-            <input type="email" id="contact-email" placeholder="Your Email" required>
-            <textarea id="contact-message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
+        <div class="box5 box">
+            <div class="box-content">
+                <h3>Shop Fashion</h3>
+                <div class="box-img" style="background-image:url('open-a-clothes-shop-customers.webp'); background-size: cover;"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box6 box">
+            <div class="box-content">
+                <h3>Categories in Kids</h3>
+                <div class="box-img" style="background-image:url('images_places-to-shop-for-kids-winter-clothes-in-south-Delhi_kidsstoppress.webp');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box7 box"><div class="box-content">
+                <h3>Laptops & Accessories</h3>
+            <div class="box-img" style="background-image:url('hq720.jpg');"></div>
+            <p>See More</p>
+            </div></div>
+        <div class="box8 box">
+            <div class="box-content">
+                <h3>Mobiles & Tablets</h3>
+            <div class="box-img" style="background-image:url('1000_F_226316634_PwkzRUjeYHmAV8dKrWQGYREKO6lo7iRM.jpg');"></div>
+            <p>See More</p>
+            </div>
+        </div>
+       
+    </div>
     <footer>
-        &copy; 2025 ElectroTech Store. All Rights Reserved.
+        <div class="foot-panel1">
+            Back to Top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p><u>Get to Know Us</u></p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a<Amazon Devices</a>
+                <a>Amazon Science</a>
+
+            </ul>
+            <ul>
+                <p><u>Make Money with Us</u></p>
+                <a>Sell products on Amazon</a>
+                <a>Advertise Your Brand</a>
+                <a>Amazon Rewards</a>
+                <a>Amazon Prime</a>
+                <a>Amazon Business</a>
+                <a>Become an affiliate</a>
+                <a>Self Publish with Kindle </a>
+
+            </ul>
+            <ul>
+                <p><u>Amazon Payments Products</u></p>
+                <a>Amazon Business Cards</a>
+                <a>Shop with Points</a>
+                <a>Reload you Balance</a>
+                <a>Amazon Currency Converter</a>
+                
+
+            </ul>
+            <ul>
+                <p><u>Let Us Help You</u></p>
+                <a>Amazon & Covid-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content</a>
+
+            </ul>
+        </div>
+        
+        <div class="foot-panel3">
+            <div class="logo1"></div>
+        </div>
+
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Yours Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+
+
+
     </footer>
 
-    <script>
-        let cart = [];
-
-        function addToCart(product, price) {
-            cart.push({ product, price });
-            updateCart();
-        }
-
-        function updateCart() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
-            let total = 0;
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.product} - $${item.price}`;
-                cartItems.appendChild(li);
-                total += item.price;
-            });
-            document.getElementById('cart-count').textContent = cart.length;
-            document.getElementById('total-price').textContent = total;
-        }
-
-        function clearCart() {
-            cart = [];
-            updateCart();
-            alert('Cart has been cleared!');
-        }
-
-        function login(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            alert(`Welcome, ${username}! You are now logged in.`);
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-            alert('Payment successful! Thank you for your purchase.');
-            cart = [];
-            updateCart();
-        }
-
-        function submitContactForm(event) {
-            event.preventDefault();
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const message = document.getElementById('contact-message').value;
-            alert(`Thank you, ${name}! We have received your message.`);
-        }
-    </script>
-
 </body>
-
 </html>
